@@ -1,6 +1,5 @@
 from playwright.sync_api import sync_playwright
-from util import get_products_url, get_product_details, write_to_csv
-# from util import get_products_url
+from utils import get_products_url, get_product_details, write_to_csv
 
 with sync_playwright() as p:
     browser = p.chromium.launch(headless=True)  # Use headless mode for faster execution

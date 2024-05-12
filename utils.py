@@ -85,7 +85,7 @@ def get_product_details(id, browser):
 
         all_selectable_image = page.query_selector_all(".selectableImage")
         image_urls = [BASE_URL+item.get_attribute("src") for item in all_selectable_image]
-        info["image_urls"] = image_urls
+        info["image_urls"] = " >> ".join(image_urls)
 
         # skipping the sizes as disable
         available_sizes = page.query_selector_all(".sizeSelectorListItemButton:not(.disable)") 
